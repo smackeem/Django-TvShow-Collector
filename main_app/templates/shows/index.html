@@ -5,10 +5,12 @@
     {% for show in shows %}
         <div class="card">
             <div class="card-content">
+                <a href="{% url 'detail' show.id %}">
                 <span class="card-title">{{show.title}}</span>
                 <span>{{show.run}}, </span>
                 <span>{{show.genre}}, </span>
                 <span>{{show.season}} seasons</span>
+            </a>
             </div>
         </div>
         {% endfor %}
