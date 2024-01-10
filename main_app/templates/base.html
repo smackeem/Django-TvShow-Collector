@@ -12,11 +12,11 @@
     <nav>
       <div class="nav-wrapper">
         <ul>
-          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Greatest Shows</a></li>
+          <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Greatest Shows</a></li>
         </ul>
         <ul class="right">
-          <li><a href="/about">About</a></li>
-          <li><a href="/shows">All TV Shows</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'index' %}">All TV Shows</a></li>
         </ul>
       </div>
     </nav>
