@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Show
 # Create your views here.
 
 # shows = [
@@ -26,4 +26,5 @@ def about(request):
     return render(request, 'about.html')
 
 def shows_index(request):
+    shows = Show.objects.all()
     return render(request, 'shows/index.html', {'shows': shows})
