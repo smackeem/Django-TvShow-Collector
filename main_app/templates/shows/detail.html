@@ -10,7 +10,10 @@
         <span>{{show.run}}, </span>
         <span>{{show.genre}}, </span>
         <span>{{show.season}} seasons</span>
-
+        <div class="card-action">
+            <a href="{% url 'update' show.id %}">Edit</a>
+            <a href="{% url 'delete' show.id %}">Delete</a>
+        </div>
     </div>
 </div>
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Show
 # Create your views here.
 
@@ -37,4 +37,12 @@ def show_details(request, show_id):
 class ShowCreate(CreateView):
     model = Show
     fields = '__all__'
+    success_url = '/shows'
+
+class ShowUpdate(UpdateView):
+    model = Show
+    fields = ['network', 'genre', 'run', 'season']
+
+class ShowDelete(DeleteView):
+    model = Show
     success_url = '/shows'
